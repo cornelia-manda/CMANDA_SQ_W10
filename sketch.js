@@ -281,17 +281,26 @@ function drawSafeZones() {
     push();
     imageMode(CENTER);
     if (safeWebImg && safeWebImg.width > 1) {
-      tint(255, 255, 255, 220);
+      fill(255, 255, 255, 20);
+      noStroke();
+      circle(zone.x, screenY, zone.radius * 2.4);
+      tint(255, 255, 255, 255);
       image(safeWebImg, zone.x, screenY, zone.radius * 2, zone.radius * 2);
       noTint();
-    } else {
-      fill(255, 255, 255, 160);
-      stroke(255, 255, 255, 220);
+      fill(255, 255, 255, 40);
+      circle(zone.x, screenY, zone.radius * 1.8);
+      stroke(255, 255, 255, 100);
       strokeWeight(2);
+      noFill();
       circle(zone.x, screenY, zone.radius * 2);
+    } else {
       noStroke();
-      fill(255, 255, 255, 80);
-      circle(zone.x, screenY, zone.radius * 1.4);
+      fill(255, 255, 255, 60);
+      circle(zone.x, screenY, zone.radius * 2);
+      stroke(255, 255, 255, 100);
+      strokeWeight(2);
+      noFill();
+      circle(zone.x, screenY, zone.radius * 2.2);
     }
     pop();
   }
@@ -318,18 +327,18 @@ function updateAndDrawAnts() {
     push();
     noStroke();
     let glowSize = 40 + sin(frameCount * 0.15) * 6;
-    fill(255, 220, 120, 120);
+    fill(200, 245, 200, 60);
     ellipse(ant.x, screenY, glowSize);
-    fill(255, 255, 180, 200);
+    fill(230, 255, 230, 110);
     ellipse(ant.x, screenY, glowSize * 0.65);
 
     imageMode(CENTER);
     if (antImg && antImg.width > 1) {
-      tint(255, 255, 255, 255);
+      tint(240, 255, 230, 180);
       image(antImg, ant.x, screenY, 30, 30);
       noTint();
     } else {
-      fill(255, 200, 80);
+      fill(210, 245, 210, 180);
       circle(ant.x, screenY, 16);
     }
     pop();
