@@ -122,7 +122,7 @@ function preload() {
   // New Remix Image Assets
   antImg = loadImage("assets/images/ant.png");
   safeWebImg = loadImage("assets/images/web-safespot.png");
-  shieldImg = loadImage("assets/images/shield-icon.jpg");
+  shieldImg = loadImage("assets/images/shield-icon.png");
 
   // Audio Assets
   music = loadSound("assets/audio/background-audio.mp3");
