@@ -672,7 +672,7 @@ function drawPlayer() {
   if (player.shieldActive) {
     push();
     noFill();
-    stroke(100, 220, 255, 200);
+    stroke(255, 255, 255, 220);
     strokeWeight(3);
     circle(player.x, player.y, player.r * 3);
     pop();
