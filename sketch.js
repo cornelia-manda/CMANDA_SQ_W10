@@ -281,12 +281,17 @@ function drawSafeZones() {
     push();
     imageMode(CENTER);
     if (safeWebImg && safeWebImg.width > 1) {
+      tint(255, 255, 255, 220);
       image(safeWebImg, zone.x, screenY, zone.radius * 2, zone.radius * 2);
+      noTint();
     } else {
-      fill(255, 255, 255, 40);
-      stroke(200, 200, 255, 150);
+      fill(255, 255, 255, 160);
+      stroke(255, 255, 255, 220);
       strokeWeight(2);
       circle(zone.x, screenY, zone.radius * 2);
+      noStroke();
+      fill(255, 255, 255, 80);
+      circle(zone.x, screenY, zone.radius * 1.4);
     }
     pop();
   }
@@ -311,11 +316,20 @@ function updateAndDrawAnts() {
     if (screenY < -30 || screenY > height + 30) continue;
 
     push();
+    noStroke();
+    let glowSize = 40 + sin(frameCount * 0.15) * 6;
+    fill(255, 220, 120, 120);
+    ellipse(ant.x, screenY, glowSize);
+    fill(255, 255, 180, 200);
+    ellipse(ant.x, screenY, glowSize * 0.65);
+
     imageMode(CENTER);
     if (antImg && antImg.width > 1) {
+      tint(255, 255, 255, 255);
       image(antImg, ant.x, screenY, 30, 30);
+      noTint();
     } else {
-      fill(180, 80, 40);
+      fill(255, 200, 80);
       circle(ant.x, screenY, 16);
     }
     pop();
