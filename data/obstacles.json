@@ -1,0 +1,21 @@
+{
+  "obstacles": [
+    { "x": 150, "worldY": -300, "size": 50 },
+    { "x": 550, "worldY": -650, "size": 60 },
+    { "x": 300, "worldY": -1100, "size": 45 },
+    { "x": 650, "worldY": -1600, "size": 55 },
+    { "x": 200, "worldY": -2100, "size": 70 },
+    { "x": 450, "worldY": -2600, "size": 50 }
+  ],
+  "safeZones": [
+    { "x": 400, "worldY": -500, "radius": 70 },
+    { "x": 220, "worldY": -1300, "radius": 80 },
+    { "x": 600, "worldY": -2000, "radius": 75 }
+  ],
+  "ants": [
+    { "x": 350, "worldY": -250 },
+    { "x": 580, "worldY": -850 },
+    { "x": 180, "worldY": -1500 },
+    { "x": 500, "worldY": -2200 }
+  ]
+}
